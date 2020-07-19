@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">One Stop Contacts.</string>
+    <string name="wash">Wash Hands Frequently</string>
+    <string name="home">Stay Home</string>
+    <string name="distance">Keep Safe Distance</string>
+    <string name="cover">Cover Your Face</string>
+    <string name="call">Sick? Call the Helpline</string>
+    <string name="slogan">Stay Home. Save Lives.</string>
+    <string name="sub_slogan">Help Stop Coronavirus</string>
+    <string name="prevent">Prevention</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="helplines">Helpline Numbers</string>
+    <string name="ngos">NGOs</string>
+    <string name="testCenters">Test Centers</string>
+</resources>

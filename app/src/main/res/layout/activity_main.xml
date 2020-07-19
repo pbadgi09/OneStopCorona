@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_gradient"
+    android:padding="10dp"
+    >
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/corona"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitCenter"
+        app:lottie_fileName="corona.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@+id/corona"
+        android:id="@+id/scrollView"
+        android:layout_marginTop="20dp"
+        >
+
+        <!--first cardview-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="4dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:id="@+id/symptom_cardview"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:src="@drawable/sick"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/symptoms"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/robotobold"
+                        android:layout_gravity="center_vertical"
+                        />
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="4dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:id="@+id/prevention_cardview"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:src="@drawable/prevention"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prevent"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/robotobold"
+                        android:layout_gravity="center_vertical"
+                        />
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <!--second cardview-->
+
+        <LinearLayout
+            android:layout_marginVertical="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="4dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:id="@+id/testCenter_cardview"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:src="@drawable/hospital"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/testCenters"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/robotobold"
+                        android:layout_gravity="center_vertical"
+                        />
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="4dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:id="@+id/helpline_cardview"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:scaleType="fitCenter"
+                        app:lottie_fileName="call.json"
+                        app:lottie_loop="true"
+                        app:lottie_autoPlay="true"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/helplines"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/robotobold"
+                        android:layout_gravity="center_vertical"
+                        />
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrollView"
+        android:layout_marginTop="10dp"
+        android:text="Worldwide Cases:"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/robotobold"
+        android:textColor="@color/black"
+        android:id="@+id/dashboard"
+        android:gravity="center"
+        android:background="@drawable/text_view_background"
+        android:elevation="2dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/dashboard"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmed Cases"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/robotobold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/text_view_background"
+                android:elevation="2dp"
+                android:layout_marginHorizontal="2dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=": Loading..."
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/robotobold"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:id="@+id/confirmedCases"
+                android:background="@drawable/text_view_background"
+                android:elevation="2dp"
+                android:layout_marginHorizontal="2dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deaths"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:fontFamily="@font/robotobold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/text_view_background"
+                android:elevation="2dp"
+                android:layout_marginHorizontal="2dp"
+                android:backgroundTint="@color/red"
+                />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=": Loading..."
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/robotobold"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:id="@+id/deathsTextView"
+                android:background="@drawable/text_view_background"
+                android:elevation="2dp"
+                android:layout_marginHorizontal="2dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recovered"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:fontFamily="@font/robotobold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/text_view_background"
+                android:elevation="2dp"
+                android:layout_marginHorizontal="2dp"
+                android:backgroundTint="@color/green"
+                />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=": Loading..."
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/robotobold"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:id="@+id/recoveredTextView"
+                android:background="@drawable/text_view_background"
+                android:elevation="2dp"
+                android:layout_marginHorizontal="2dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+</layout>
